@@ -10,8 +10,7 @@ import java.util.HashMap;
 @RestController
 @EnableAutoConfiguration
 public class App {
-
-    //
+    // curl -vkX GET http://127.0.0.1:8080/
     @RequestMapping("/")
     String home() {
         return "Hello World!";
@@ -51,6 +50,14 @@ public class App {
     @GetMapping("/test_json")
     ResObject test_json() {
         return new ResObject(3, "return json");
+    }
+
+    // curl -vkX GET http://127.0.0.1:8080/test_json
+    @GetMapping("/check_token")
+    HashMap<String, String>  check_token() {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("message", "valid token");
+        return map;
     }
 
     public static void main(String[] args) {
