@@ -26,3 +26,4 @@ $ git remote -v
 > origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
 > origin  https://github.com/USERNAME/REPOSITORY.git (push)
 
+java -jar target/chapter1-1.0-SNAPSHOT.jar --spring.profiles.active=dev
