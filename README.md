@@ -1,9 +1,11 @@
-## readme
+## * a simple spring boot example *
+
+-----
 
 #### 环境要求
 ```
-java8
-maven 
+java1.8 (my version: openjdk version "1.8.0_232")
+Apache Maven 3.6.0
 ```
 
 ---
@@ -22,7 +24,6 @@ mvn test
 mvn package spring-boot:repackage
 java -jar target/chapter1-1.0-SNAPSHOT.jar
 ```
-
 
 #### --- test:
 ```shell
