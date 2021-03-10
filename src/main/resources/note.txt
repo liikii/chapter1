@@ -27,3 +27,19 @@ $ git remote -v
 > origin  https://github.com/USERNAME/REPOSITORY.git (push)
 
 java -jar target/chapter1-1.0-SNAPSHOT.jar --spring.profiles.active=dev
+
+
+
+-- test.people definition
+
+CREATE TABLE `people` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `sex` varchar(40) NOT NULL DEFAULT '',
+  `date` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+create user test identified by '';
+mysql> grant SELECT, INSERT, UPDATE, DELETE on test.* to 'test'@'%';
+mysql> flush privileges;
